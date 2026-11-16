@@ -1,13 +1,18 @@
 import type { OptimizedImage, OverviewSlide as OverviewSlideData } from '@/types/hero';
 import HeroImage from './HeroImage';
+import { Info } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 interface Props {
   slide: OverviewSlideData;
   madeInIndia: OptimizedImage;
   priority: boolean;
+  active: boolean;
+  onDetailsOpen: () => void;
 }
 
-export default function OverviewSlide({ slide, madeInIndia, priority }: Props) {
+export default function OverviewSlide({ slide, madeInIndia, priority, active, onDetailsOpen }: Props) {
   return (
     <div className="overview-slide">
       <div className="overview-copy">
@@ -16,6 +21,12 @@ export default function OverviewSlide({ slide, madeInIndia, priority }: Props) {
           <span className="product-pill-name">Spanda DAT</span>
           <span className="product-pill-divider" aria-hidden="true">|</span>
           <span>Digital Auscultation Trainer</span>
+          {active && <Popover onOpenChange={(open) => { if (open) onDetailsOpen(); }}>
+            <PopoverTrigger asChild><Button variant="ghost" size="icon-xs" className="overview-info" aria-label="About Spanda DAT"><Info aria-hidden="true" /></Button></PopoverTrigger>
+            <PopoverContent className="scene-details" side="bottom" collisionPadding={16} aria-label="Spanda DAT learning features">
+              {slide.features.map((feature) => <div className="overview-detail" key={feature.title}><h3>{feature.title}</h3><p>{feature.description}</p></div>)}
+            </PopoverContent>
+          </Popover>}
         </div>
         <div className="overview-intro">
           <h2 data-reveal="heading">{slide.title}<br /><span>{slide.accentTitle}</span></h2>

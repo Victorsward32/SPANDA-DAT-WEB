@@ -84,7 +84,7 @@ export default function HeroSlider({ slides, madeInIndia, controller }: Props) {
                   inert={index !== selected}
                 >
                   {slide.kind === 'overview'
-                    ? <OverviewSlide slide={slide} madeInIndia={madeInIndia} priority={index === 0} />
+                    ? <OverviewSlide slide={slide} madeInIndia={madeInIndia} priority={index === 0} active={index === selected} onDetailsOpen={pause} />
                     : <SceneSlide slide={slide} active={index === selected} onDetailsOpen={pause} />}
                 </CarouselItem>
               ))}
