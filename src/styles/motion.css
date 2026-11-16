@@ -1,0 +1,90 @@
+/* Shared motion language: short interactions, slower editorial entrances. */
+:root {
+  --ease-premium: cubic-bezier(.22, 1, .36, 1);
+  --motion-interaction: 240ms;
+  --motion-reveal: 720ms;
+}
+
+.site-header {
+  transition: background-color 320ms, box-shadow 320ms, border-color 320ms;
+}
+.site-header[data-scrolled='true'] {
+  background: rgb(var(--surface-rgb) / 96%);
+  border-bottom-color: rgb(var(--ink-rgb) / 10%);
+  box-shadow: 0 8px 28px -18px rgb(0 12 49 / 28%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .header-inner { animation: premium-header 650ms var(--ease-premium) backwards; }
+  .chapter-nav { animation: premium-reveal 650ms 80ms var(--ease-premium) backwards; }
+  .hero-stage-shell { animation: premium-stage 1000ms var(--ease-premium) backwards; }
+  .hero-pagination { animation: premium-reveal 650ms 240ms var(--ease-premium) backwards; }
+  .hero-track { transition: height 200ms ease-out; }
+
+  .chapter-indicator {
+    transition: transform 460ms var(--ease-premium), width 460ms var(--ease-premium);
+  }
+  .hero-pagination .hero-dot-button span {
+    transition: width 360ms var(--ease-premium), background-color 240ms;
+  }
+
+  /* Replays when a slide becomes active. Photos stay fully visible. */
+  [data-slot='carousel-item'][aria-hidden='false'] [data-reveal] {
+    animation: premium-reveal var(--motion-reveal) var(--reveal-delay, 0ms) var(--ease-premium) backwards;
+  }
+  [data-reveal='eyebrow'] { --reveal-delay: 70ms; }
+  [data-reveal='heading'] { --reveal-delay: 130ms; }
+  [data-reveal='feature'] { --reveal-delay: 210ms; }
+  [data-reveal='feature']:nth-child(2) { --reveal-delay: 270ms; }
+  [data-reveal='details'] { --reveal-delay: 300ms; }
+  [data-slot='carousel-item'][aria-hidden='false'] [data-reveal='product'] {
+    animation-name: premium-product;
+    animation-duration: 1100ms;
+    animation-delay: 50ms;
+  }
+
+  .brand img, .request-demo-button, .hero-flank, .feature-card, .overview-visual img, .scene-chips li {
+    transition: transform var(--motion-interaction) var(--ease-premium),
+      box-shadow var(--motion-interaction), background-color var(--motion-interaction),
+      border-color var(--motion-interaction);
+  }
+  .request-demo-button:active, .hero-flank:active { scale: .96; }
+  .primary-nav[data-open='true'] { animation: premium-menu 280ms var(--ease-premium) backwards; }
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .brand:hover img { transform: translateY(-1px); }
+  .request-demo-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px -7px rgb(0 47 150 / 55%);
+  }
+  .hero-flank:hover { scale: 1.06; }
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgb(0 47 150 / 17%);
+    box-shadow: 0 12px 26px -16px rgb(0 12 49 / 24%);
+  }
+  .overview-visual:hover img { transform: translateY(-5px); }
+  .scene-chips li:hover { transform: translateY(-2px); }
+}
+
+@keyframes premium-header {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes premium-reveal {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes premium-stage {
+  from { transform: translateY(24px); }
+  to { transform: translateY(0); }
+}
+@keyframes premium-product {
+  from { transform: translateY(18px) scale(.97); }
+  to { transform: translateY(0) scale(1); }
+}
+@keyframes premium-menu {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

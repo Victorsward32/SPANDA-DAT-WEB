@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import HomeExperience from '@/components/HomeExperience';
+import { heroSlides } from '@/data/hero-slides';
+import { optimizeImage } from '@/lib/images';
+import logoSource from '@/assets/stitch/logo.png';
+import originSource from '@/assets/stitch/make-in-india.png';
+
+const [slides, logo, madeInIndia] = await Promise.all([
+  Promise.all(heroSlides.map(async (slide) => ({
+    ...slide,
+    image: await optimizeImage(
+      slide.image,
+      slide.kind === 'overview' ? [480, 800, 1400] : [480, 800, 1120, 1440, 1920],
+      slide.kind === 'overview'
+        ? '(max-width: 760px) 80.75vw, 42.75vw'
+        : '(max-width: 360px) calc((100vw - 28px) * .95), (max-width: 760px) calc((100vw - 36px) * .95), (max-width: 1100px) calc((100vw - 64px) * .95), (min-width: 1696px) 1520px, calc((100vw - 96px) * .95)',
+    ),
+  }))),
+  optimizeImage(logoSource, [256, 512], '140px'),
+  optimizeImage(originSource, [100, 200], '80px'),
+]);
+---
+
+<Layout>
+  <link slot="head" rel="preload" as="image" href={slides[0].image.src} imagesrcset={slides[0].image.srcSet} imagesizes={slides[0].image.sizes} fetchpriority="high" />
+  <HomeExperience slides={slides} logo={logo} madeInIndia={madeInIndia} client:load />
+</Layout>

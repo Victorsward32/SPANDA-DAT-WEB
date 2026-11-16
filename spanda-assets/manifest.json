@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Spanda DAT manikin",
+    "path": "manikin/spanda-dat/front.png",
+    "view": "front",
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/manikin/studio/front-transparent-shadow-v4.png"
+  },
+  {
+    "name": "Spanda DAT manikin",
+    "path": "manikin/spanda-dat/back.png",
+    "view": "back",
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/manikin/studio/back-transparent-shadow-v4.png"
+  },
+  {
+    "name": "Spanda DAT manikin",
+    "path": "manikin/spanda-dat/left.png",
+    "view": "left",
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/manikin/studio/left-transparent-shadow-v4.png"
+  },
+  {
+    "name": "Spanda DAT manikin",
+    "path": "manikin/spanda-dat/right.png",
+    "view": "right",
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/manikin/studio/right-transparent-shadow-v4.png"
+  },
+  {
+    "name": "DATS Scope R",
+    "path": "scopes/dats-scope-r.png",
+    "view": null,
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/products/clay/dats-scope-r-updated-chestpiece-transparent-shadow.png"
+  },
+  {
+    "name": "Spanda Elite",
+    "path": "stethoscopes/spanda-elite.png",
+    "view": null,
+    "width": 941,
+    "height": 1672,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/products/clay/spanda-elite-transparent-shadow.png"
+  },
+  {
+    "name": "Spanda Pro",
+    "path": "stethoscopes/spanda-pro.png",
+    "view": null,
+    "width": 941,
+    "height": 1672,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/products/clay/spanda-pro-transparent-shadow.png"
+  },
+  {
+    "name": "Digital stethoscope",
+    "path": "stethoscopes/digital-stethoscope.png",
+    "view": null,
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/products/clay/digital-stethoscope-transparent-shadow.png"
+  },
+  {
+    "name": "Spanda receiver",
+    "path": "receivers/spanda-receiver.png",
+    "view": null,
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/products/clay/receiver-short-tip-v3-transparent-shadow.png"
+  },
+  {
+    "name": "Speaker",
+    "path": "other-products/speaker.png",
+    "view": null,
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/products/clay/speaker-transparent-shadow.png"
+  },
+  {
+    "name": "Router",
+    "path": "other-products/router.png",
+    "view": null,
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/products/clay/router-transparent-shadow.png"
+  },
+  {
+    "name": "USB hub",
+    "path": "other-products/usb-hub.png",
+    "view": null,
+    "width": 1254,
+    "height": 1254,
+    "format": "png",
+    "has_alpha": true,
+    "source": "assets/products/clay/usb-hub-transparent-shadow.png"
+  },
+  {
+    "name": "Spanda DAT brochure",
+    "path": "brochures/spanda-dat/page-1.png",
+    "view": "page-1",
+    "width": 1785,
+    "height": 2526,
+    "format": "png",
+    "has_alpha": false,
+    "source": "assets/brochure/spanda-dat-brochure-page-1.png"
+  },
+  {
+    "name": "Spanda DAT brochure",
+    "path": "brochures/spanda-dat/page-2.png",
+    "view": "page-2",
+    "width": 1785,
+    "height": 2526,
+    "format": "png",
+    "has_alpha": false,
+    "source": "assets/brochure/spanda-dat-brochure-page-2.png"
+  },
+  {
+    "name": "Spanda DAT group learning",
+    "path": "learning/group-learning.png",
+    "view": null,
+    "width": 1671,
+    "height": 941,
+    "format": "png",
+    "has_alpha": false,
+    "source": "GroupLearning.png"
+  },
+  {
+    "name": "Spanda DAT immersive learning",
+    "path": "learning/immersive-learning.png",
+    "view": null,
+    "width": 1672,
+    "height": 941,
+    "format": "png",
+    "has_alpha": false,
+    "source": "ImmersiveLearning.png"
+  },
+  {
+    "name": "Spanda DAT live patient auscultation",
+    "path": "learning/live-patient-auscultation.png",
+    "view": null,
+    "width": 1671,
+    "height": 941,
+    "format": "png",
+    "has_alpha": false,
+    "source": "Spanda Digital Stethoscope Training Demonstration.png"
+  }
+]
