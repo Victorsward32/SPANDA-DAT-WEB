@@ -449,3 +449,10 @@
   .scene-chips { gap: 4px; margin-top: 8px; }
   .scene-chips li { padding: 3px 6px; font-size: 8px; }
 }
+
+@media (max-width: 760px) {
+  .request-demo-button { height: 30px; padding-inline: 12px; font-size: 10px; }
+  .footer-demo { height: 36px; padding-inline: 16px; font-size: 11px; gap: 8px; }
+  .footer-demo svg { width: 13px; height: 13px; }
+  .inquiry-actions button, .support-content button, .request-preview button { min-height: 32px; height: auto; padding: 7px 12px; font-size: 11px; }
+}
