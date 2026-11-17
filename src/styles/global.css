@@ -312,9 +312,10 @@
   .proof-metric small { display: none; }
   .origin-mark img { width: 48px; height: 22px; margin-bottom: 3px; }
   .origin-mark p { font-size: 7px; letter-spacing: 0; }
-  .hero-flank { width: 36px; height: 36px; }
-  .hero-flank--previous { left: -12px; }
-  .hero-flank--next { right: -12px; }
+  .hero-flank { width: 28px; height: 28px; }
+  .hero-flank svg { width: 14px; height: 14px; }
+  .hero-flank--previous { left: -9px; }
+  .hero-flank--next { right: -9px; }
   .scene-caption { top: 2%; padding: 2px 6px; border-radius: 7px; max-width: 50%; }
   .scene-caption-title { gap: 4px; }
   .scene-caption h2 { font-size: clamp(10px, 2.8vw, 16px); letter-spacing: -.02em; }
