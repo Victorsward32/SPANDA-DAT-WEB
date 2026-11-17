@@ -400,7 +400,7 @@
   .overview-copy { position: relative; justify-content: flex-start; gap: 4px; }
   .overview-copy > .product-pill { position: static; display: inline-flex; flex-shrink: 0; align-self: flex-start; gap: 4px; padding: 2px 5px; font-size: 6px; line-height: 1.2; }
   .product-pill .product-pill-divider, .product-pill > span:last-of-type { display: inline; }
-  .overview-slide .feature-grid { gap: 3px; margin-top: 12px; }
+  .overview-slide .feature-grid { gap: 3px; margin-top: 18px; }
   .feature-card p { line-height: 1.2; }
   .feature-card h3 { margin-bottom: 1px; }
   .proof-metrics { padding-top: 3px; }
@@ -431,5 +431,5 @@
   .overview-visual { height: 100%; min-height: 0; }
   .overview-visual img { height: 100%; max-height: 100%; object-fit: contain; }
   .overview-intro { padding-block: 12px; }
-  .feature-grid { margin-top: 24px; }
+  .feature-grid { margin-top: 36px; }
 }
