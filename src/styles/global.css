@@ -419,3 +419,17 @@
   .scene-image { height: 100%; object-fit: contain; }
   .overview-copy, .overview-intro { min-height: 0; }
 }
+
+/* Reserve room for chapter navigation and pagination on desktop screens. */
+@media (min-width: 761px) {
+  .hero-showcase {
+    --desktop-frame-height: max(360px, calc(100svh - var(--header-height) - 160px));
+    --overview-height: min(calc(clamp(500px, (100vw - var(--showcase-gutter)) * 9 / 16, 900px) * var(--showcase-scale)), var(--desktop-frame-height));
+    width: min(calc(min(1600px, 100% - var(--showcase-gutter)) * var(--showcase-scale)), calc(var(--desktop-frame-height) * 16 / 9));
+  }
+  .overview-slide { padding: clamp(24px, 3vw, 48px); gap: 24px; }
+  .overview-visual { height: 100%; min-height: 0; }
+  .overview-visual img { height: 100%; max-height: 100%; object-fit: contain; }
+  .overview-intro { padding-block: 12px; }
+  .feature-grid { margin-top: 16px; }
+}
